@@ -14,7 +14,7 @@ export const useForm = (initialValue) => {
         });
     }
 
-    return [values, handleChanges]
+    return [values, setValues, handleChanges]
     
 
 };
