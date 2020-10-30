@@ -30,13 +30,36 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+  - First we create the class like so `class Example extends React.Component {}`. 
+  - Then in our `constructor()` function, after calling `super()` we set state like so:
+    - `this.state = {//Set data structure for state/ define intial value}`
+    - Now our Example component has some state of its own to play with!
+
 2. Describe the different phases of the component lifecycle.
+
+  Mounting/ Birth:
+    - Here the component undergoes its inital construction. Initial data (state) is definied in the constructor, Render method is invoked, and `componetDidMount` gets called (after the render)
+  Updating/ Growth:
+    - This is when we update our component data. Can use `setState` - forcing another render call 
+    - Bonus: can use `shouldComponentUpdate` method to stop a component from rendering if desired. 
+  Un-Mounting/ Death:
+    - When we kill/ remove a component from the screen.
+    - `componentWillUnmount` is called - can be used for clean up.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+  - See answer to question Two.
+
 4. Define stateful logic.
 
+  - Stateful logic is any logic that is built into a component. Typically refers to logic that deals with the state in the component
+  - Examples: Function that handles a change or click event by updating state or toggling a value in state etc. 
+
 5. Describe how to test a React component with React Testing Library.
+  - Follows AAA outling: Arrange - Act - Assert 
+    - Arrange: In your test you first need to render the component you are testing then "grab" any elements you need with a suitable scree query 
+    - Act: Manipulate any elements so they can be tested - this is where we woudl use fireEvent method from rtl.
+    - Assert: Ensure actions taken in act had desired outcome. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
